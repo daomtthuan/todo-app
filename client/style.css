@@ -1,0 +1,18 @@
+.cursor-pointer:hover {
+  cursor: pointer !important;
+}
+
+.form-control:focus {
+  border-color: var(--info);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(23, 164, 186, 0.25);
+}
+
+.btn-action {
+  width: 2.25rem;
+  padding: 1;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}

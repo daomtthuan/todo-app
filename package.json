@@ -1,0 +1,15 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Todo App - Work management",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/daomtthuan/todo-app.git",
+  "author": "Daomtthuan <dao.mt.thuan@gmail.com>",
+  "private": false
+}

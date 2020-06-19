@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/client/style.css">
+  <title>Todo App</title>
+</head>
+
+<body class="text-light bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary shadow sticky-top">
+    <a class="navbar-brand" href="/client">
+      <strong class="text-white">Todo App</strong>
+    </a>
+  </nav>
+
+  <main class="py-5">
+    <div class="container">
+      <button id="button-create" class="btn btn-info" data-toggle="modal" data-target="#modal-create">Create</button>
+
+      <div class="table-responsive mt-3">
+        <table id="table-work" class="table table-sm table-dark table-hover table-bordered">
+          <thead>
+            <tr class="bg-secondary">
+              <th scope="col">No.</th>
+              <th scope="col">Name</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table-work-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="modal-create" class="modal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+          <div class="modal-header bg-dark border-secondary">
+            <h5 class="modal-title">Create</h5>
+            <div class="close text-light cursor-pointer" data-dismiss="modal" aria-label="Close">
+              <i class="fas fa-times mx-1"></i>
+            </div>
+          </div>
+          <div class="modal-body bg-dark">
+            <form class="bg-dark">
+              <div class="form-group">
+                <label for="modal-create-input-name">Name</label>
+                <input type="text" class="form-control bg-secondary text-white border-0" id="modal-create-input-name" aria-describedby="name-help" maxlength="100">
+                <small id="name-help" class="form-text text-muted">Max length 100 characters</small>
+              </div>
+              <div class="form-group mb-0">
+                <label for="modal-create-input-content">Content</label>
+                <textarea class="form-control bg-secondary text-white border-0" id="modal-create-input-content" rows="5" aria-describedby="name-content" maxlength="500"></textarea>
+                <small id="name-content" class="form-text text-muted">Max length 500 characters</small>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer bg-dark border-secondary">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="modal-create-button-create" type="button" class="btn btn-info">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-details" class="modal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+          <div class="modal-header bg-dark border-secondary">
+            <h5 class="modal-title">Details</h5>
+            <div class="close text-light cursor-pointer" data-dismiss="modal" aria-label="Close">
+              <i class="fas fa-times mx-1"></i>
+            </div>
+          </div>
+          <div class="modal-body bg-dark">
+            <form class="bg-dark">
+              <div class="form-group">
+                <label for="modal-details-input-id">ID</label>
+                <input type="text" class="form-control bg-secondary text-white border-0" id="modal-details-input-id" readonly>
+              </div>
+              <div class="form-group">
+                <label for="modal-details-input-name">Name</label>
+                <input type="text" class="form-control bg-secondary text-white border-0" id="modal-details-input-name" readonly>
+              </div>
+              <div class="form-group mb-0">
+                <label for="modal-details-input-content">Content</label>
+                <textarea class="form-control bg-secondary text-white border-0" id="modal-details-input-content" rows="5" readonly></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer bg-dark border-secondary">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-edit" class="modal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+          <div class="modal-header bg-dark border-secondary">
+            <h5 class="modal-title">Edit</h5>
+            <div class="close text-light cursor-pointer" data-dismiss="modal" aria-label="Close">
+              <i class="fas fa-times mx-1"></i>
+            </div>
+          </div>
+          <div class="modal-body bg-dark">
+            <form class="bg-dark">
+              <div class="form-group">
+                <label for="modal-edit-input-name">Name</label>
+                <input type="text" class="form-control bg-secondary text-white border-0" id="modal-edit-input-name" aria-describedby="name-help" maxlength="100">
+                <small id="name-help" class="form-text text-muted">Max length 100 characters</small>
+              </div>
+              <div class="form-group mb-0">
+                <label for="modal-edit-input-content">Content</label>
+                <textarea class="form-control bg-secondary text-white border-0" id="modal-edit-input-content" rows="5" aria-describedby="name-content" maxlength="500"></textarea>
+                <small id="name-content" class="form-text text-muted">Max length 500 characters</small>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer bg-dark border-secondary">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="modal-edit-button-edit" type="button" class="btn btn-info">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="/client/script.js"></script>
+</body>
+
+</html>
